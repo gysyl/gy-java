@@ -21,7 +21,85 @@ public class World {
         sky.y1 = -700;
         sky.speed = 1;
         sky.step();
+        
         hero = new Hero();
+        hero.width = 97;
+        hero.height = 124;
+        hero.x = 140;
+        hero.y = 400;
+        hero.life = 3;
+        hero.doubleFire = 0;
+        hero.step();
+        hero.moveTo(100, 200);
+
+        a1 = new Airplane();
+        a1.width = 49;
+        a1.height =68;
+        a1.x = 120;
+        a1.y = 300;
+        a1.speed = 2;
+        a1.step();
+
+        a2 = new Airplane();
+        a2.width = 49;
+        a2.height =68;
+        a2.x = 200;
+        a2.y = 300;
+        a2.speed = 2;
+        a2.step();
+
+        ba1 = new BigAirplane();
+        ba1.width = 100;
+        ba1.height = 150;
+        ba1.x = 100;
+        ba1.y = 100;
+        ba1.speed = 2;
+        ba1.step();
+
+        ba2 = new BigAirplane();
+        ba2.width = 100;
+        ba2.height = 150;
+        ba2.x = 200;
+        ba2.y = 100;
+        ba2.speed = 2;
+        ba2.step();
+
+        b1 = new Bee();
+        b1.width = 50;
+        b1.height = 50;
+        b1.x = 100;
+        b1.y = 100; 
+        b1.xSpeed = 2;
+        b1.ySpeed = 2;
+        b1.step();
+
+        b2 = new Bee(); 
+        b2.width = 50;
+        b2.height = 50;
+        b2.x = 200;
+        b2.y = 100;
+        b2.xSpeed = 2;
+        b2.ySpeed = 2;
+        b2.step();
+
+        bt1 = new Bullet();
+        bt1.width = 10;
+        bt1.height = 20;
+        bt1.x = 100;
+        bt1.y = 100;
+        bt1.speed = 2;
+        bt1.step();
+
+        bt2 = new Bullet();
+        bt2.width = 10;
+        bt2.height = 20;
+        bt2.x = 200;
+        bt2.y = 100;
+        bt2.speed = 2;
+        bt2.step();
+
+
+        
     }
 
     public static void main(String[] args) {
