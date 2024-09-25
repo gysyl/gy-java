@@ -3,17 +3,40 @@ package cn.tedu.shoot;
 public class World {
     Sky sky; // 天空对象
     Hero hero; // 英雄机对象
-    Airplane a1; // 小敌机对象
-    Airplane a2; // 小敌机对象
-    BigAirplane ba1; // 大敌机对象
-    BigAirplane ba2; // 大敌机对象
-    Bee b1; // 蜜蜂对象
-    Bee b2; // 蜜蜂对象
-    Bullet bt1; // 子弹数组对象
-    Bullet bt2; // 子弹数组对象
+    // 创建小敌机数组
+    Airplane[] as;
+    // 创建大敌机数组
+    BigAirplane[] bas;
+    // 创建蜜蜂数组
+    Bee[] bs;
+    // 创建子弹数组
+    Bullet[] bts;
+    // 创建子弹数组
+    // Airplane a1; // 小敌机对象
+    // Airplane a2; // 小敌机对象
+    // BigAirplane ba1; // 大敌机对象
+    // BigAirplane ba2; // 大敌机对象
+    // Bee b1; // 蜜蜂对象
+    // Bee b2; // 蜜蜂对象
+    // Bullet bt1; // 子弹数组对象
+    // Bullet bt2; // 子弹数组对象
 
     void action(){
-        sky = new Sky();
+        // 初始化小敌机数组
+        as = new Airplane[3];
+        // 初始化小敌机数组中的小敌机对象
+        for (int i = 0; i < as.length; i++) {
+            as[i] = new Airplane();
+            System.out.println("小敌机的x坐标:" + as[i].x + ", 小敌机的y坐标:" + as[i].y + ", 小敌机的速度:" + as[i].speed);
+        }
+        // 初始化大敌机数组
+        bas = new BigAirplane[2];
+        // 初始化蜜蜂数组
+        bs = new Bee[2];
+        // 初始化子弹数组
+        bts = new Bullet[2];
+        // 初始化小敌机数组中的小敌机对象
+        /* sky = new Sky();
         sky.width = 400;
         sky.height = 700;
         sky.x = 0;
@@ -96,10 +119,42 @@ public class World {
         bt2.x = 200;
         bt2.y = 100;
         bt2.speed = 2;
-        bt2.step();
+        bt2.step();   */
 
+        sky = new Sky();
+        hero = new Hero();
 
-        
+        // a1 = new Airplane();
+        // a2 = new Airplane();
+        // ba1 = new BigAirplane();
+        // ba2 = new BigAirplane();
+        // b1 = new Bee();
+        // b2 = new Bee();
+        // bt1 = new Bullet(1,2);
+        // bt2 = new Bullet(11,55);
+
+        // // 输出天空的所有属性        
+        // System.out.println("天空的宽度:" + sky.width + ", 天空的高度:" + sky.height + ", 天空的x坐标:" + sky.x + ", 天空的y坐标:" + sky.y + ", 天空的y1坐标:" + sky.y1 + ", 天空的速度:" + sky.speed);
+
+        // // 输出英雄机的所有属性
+        // System.out.println("英雄机的宽度:" + hero.width + ", 英雄机的高度:" + hero.height + ", 英雄机的x坐标:" + hero.x + ", 英雄机的y坐标:" + hero.y + ", 英雄机的生命:" + hero.life + ", 英雄机的双倍火力:" + hero.doubleFire);
+
+        // // 输出小敌机的所有属性
+        // System.out.println("小敌机a1的宽度:" + a1.width + ", 小敌机a1的高度:" + a1.height + ", 小敌机a1的x坐标:" + a1.x + ", 小敌机a1的y坐标:" + a1.y + ", 小敌机a1的速度:" + a1.speed);
+        // System.out.println("小敌机a2的宽度:" + a2.width + ", 小敌机a2的高度:" + a2.height + ", 小敌机a2的x坐标:" + a2.x + ", 小敌机a1的y坐标:" + a2.y + ", 小敌机a2的速度:" + a2.speed);
+
+        // // 调用天空的step方法
+        // sky.step();
+        // // 调用英雄机的step方法
+        // hero.step();
+        // // 调用小敌机的step方法
+        // a1.step();
+        // a2.step();
+        // // 调用大敌机的step方法
+        // ba1.step();
+        // ba2.step();
+        // // 调用蜜蜂的step方法
+        // b1.step();      
     }
 
     public static void main(String[] args) {
